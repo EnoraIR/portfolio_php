@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+	font-family: 'Sen', sans-serif;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 3em;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.6em;
+}
+
+.contenu {
+	padding-top: 5vh;
+}
+
+.section {
+	padding-top: 7.5vh;
+	width: 100vw;
+	box-sizing: border-box;
+}
+
+.onglet {
+	width: 19.5vw;
+	box-sizing: border-box;
+	display: inline-block;
+	text-align: center;
+}
+
+.onglet:hover {
+  color: gray;
+}
+
+
+.description {
+	width: 50vw;
+	padding-left: 25vw;
+	padding-top: 5vh;
+}
