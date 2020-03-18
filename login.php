@@ -27,21 +27,34 @@ if(isset($_POST["submit"]))
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+    <title>Page de Connexion</title>
 </head>
 <body>
-
-    <form action="login.php" method="post">
-
-    <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-
-        <button type="submit" name="submit" value="OK">Login</button>
+    <div class="contenu">
+        <div class="section">
+            <h2 class="onglet">
+                <a href="index.php">
+                    Accueil
+                </a>
+            </h2>
+        </div>
+        <form action="login.php" method="post">
+        <div class="container">
+            <div class="pseudo">
+                <label for="uname"><b>Nom d'Utilisateur</b></label>
+                <input type="text" placeholder="Utilisateur" name="uname" required>
+            </div>
+            <div class="mdp">
+                <label for="psw"><b>Mot de Passe</b></label>
+                <input type="password" placeholder="Mot de Passe" name="psw" required>
+            </div>
+            <div class="entree">
+                <button type="submit" name="submit" value="OK">Se connecter</button>
+            </div>
+        </div>
+        </form>
     </div>
-    </form>
 </body>
 </html>

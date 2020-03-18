@@ -20,13 +20,26 @@ $work = new Works;
 				{echo($_SESSION["account"]["username"]);}
 			else
 				{echo "NOT CONNECTED";}
+			/*echo($user->get_user(1)["username"]);*/
         ?></h1>
 		<div class="section">
-			<h2 class="onglet">A Propos</h2>
-			<h2 class="onglet">Projet 1</h2>
-			<h2 class="onglet">Projet 2</h2>
-			<h2 class="onglet">Projet 3</h2>
-			<h2 class="onglet">Me Contacter</h2>
+			<h2 class="onglet">
+				A Propos
+			</h2>
+			<h2 class="onglet">
+				Projet 1
+			</h2>
+			<h2 class="onglet">
+				Projet 2
+			</h2>
+			<h2 class="onglet">
+				Projet 3
+			</h2>
+			<h2 class="onglet">
+				<a href="login.php">
+					Se Connecter
+				</a>
+			</h2>
 		</div>
 		<div class="description">
 			<h3>Sous-titre ou image</h3>
