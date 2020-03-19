@@ -14,6 +14,7 @@ if(isset($_POST["submit"]))
 {
     if($_POST['uname'] != NULL && $_POST['psw'] != NULL)
     {
+        /*echo(password_hash($_POST["psw"], PASSWORD_DEFAULT));*/
         $user->connect($_POST["uname"], $_POST["psw"]);
     }
     else
@@ -28,7 +29,7 @@ if(isset($_POST["submit"]))
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
-    <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <title>Page de Connexion</title>
 </head>
 <body>

@@ -3,21 +3,50 @@
 	padding: 0;
 	top: 0;
 	left: 0;
-	font-family: 'Sen', sans-serif;
 	text-decoration: none;
+	color: none;
 }
 
 body {
-	background-color: #EBEBEB;
+	background-color: #fcf8e8;
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 4em;
 	text-align: center;
+	font-family: 'Playfair Display', serif;
+	font-weight: 900;
 }
 
 h2 {
-	font-size: 1.6em;
+	font-size: 1.4em;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	color: #df7861;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: #ecb390;
+}
+
+a:hover {
+	color: #df7861;
+}
+
+h3 {
+	font-size: 1.8em;
+	padding-bottom: 0.5vh;
+	padding-top: 15vh;
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	text-align: center;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
 }
 
 .contenu {
@@ -28,7 +57,7 @@ h2 {
 }
 
 .section {
-	padding-top: 7.5vh;
+	padding-top: 3.5vh;
 	width: 100vw;
 	box-sizing: border-box;
 
@@ -49,7 +78,6 @@ h2 {
 .description {
 	width: 50vw;
 	padding-left: 25vw;
-	padding-top: 5vh;
 
 	position: relative;
 	z-index: 10;
@@ -108,7 +136,7 @@ h2 {
 }
 
 .ptgris{
-	background: #cbcbcb;
+	background: #df7861;
 	border-radius:50%;
 	width:10px;
 	height:10px;
