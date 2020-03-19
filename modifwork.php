@@ -5,8 +5,6 @@ include_once("php/code.php");
 
 $id = $_GET["id"];
 $newproj = new Works;
-$titre = $newproj->get_titre_by_id($_GET["id"]);
-/*$description = $newproj->get_desc_by_id($_GET["id"]);*/
 
 if(isset($_POST["submit"]))
 {
@@ -82,21 +80,23 @@ if(isset($_POST["submit"]))
         </div>
             <?php
                 echo '<h3>Projet n°'.$id.'</h3>';
-                echo $titre;
-                echo $description;
             ?>
         <div class="container">
             <form action="createproject.php" method="post">
-                <div class="pseudo">
+                <div class="pseudo">    
                     <label for="titre"><b>Titre du Projet</b></label>
                     <input type="text" value="<?php
-                        echo $id;
-                    ?>" name="titre" required>
+                        $titre = $newproj->get_titre_by_id($_GET['id']);
+                        echo $titre;
+                        ?>" name="titre" required>
                 </div>
                 <div class="mdp">
                     <label for="description"><b>Description du Projet</b></label>
                     <p></br></p>
-                    <textarea rows="5" cols="40" name="description" required><?php echo 'A Propos de ce Projet' ?></textarea>
+                    <textarea rows="5" cols="40" name="description" required><?php
+                            $description = $newproj->get_desc_by_id($_GET["id"]);
+                            echo $description;
+                        ?></textarea>
                 </div>
                 <div class="entree">
                     <button type="submit" name="submit" value="OK">Modifier</button>

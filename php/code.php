@@ -58,11 +58,11 @@ class Works {
         $request->execute([$titre, $description]);
     }
 
-    function update($titre, $description, $id)
+    function del($titre, $description, $id)
     {
         global $db;
 
-        $request = $db->prepare('UPDATE works SET titre=?, description=? WHERE id=?');
+        $request = $db->prepare("DELETE works SET titre=?, description=? WHERE id=\"$id\"");
         $request->execute([$titre, $description, $id]);
     }
 
@@ -73,6 +73,7 @@ class Works {
         $request = "SELECT titre FROM works WHERE id=\"$id\"";
         $resultat = $db->query($request);
         $user = $resultat->fetch();
+        print_r($user[0]);
     }
 
     function get_desc_by_id($id)
@@ -82,6 +83,7 @@ class Works {
         $request = "SELECT description FROM works WHERE id=\"$id\"";
         $resultat = $db->query($request);
         $user = $resultat->fetch();
+        print_r($user[0]);
     }
 }
 ?>  
