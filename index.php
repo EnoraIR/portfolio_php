@@ -60,16 +60,16 @@ $work = new Works;
 			</h2>
 		</div>
 		<div class="description">
-			<p><?php
+			<?php
 				$allworks = $work->get_works();
 				foreach($allworks as $w)
 					{
 						echo '<h3>'.($w["titre"]).'</h3>'; 
 						if(isset($_SESSION["account"]["username"]))
-							{echo "<a href=''>Modifer le projet</a>";}
-						echo '<p class="descproj">'.($w["description"]).'</p>';
+							{echo "<div class='lien'><a href='modifwork.php?id=".($w["id"])."'>Modifier le projet</a></div>";}
+						echo '<p class="descproj"></br>'.($w["description"]).'</p>';
 					}
-			?></p>
+			?>
 		</div>
 	</div>
 </body>

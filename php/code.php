@@ -66,5 +66,22 @@ class Works {
         $request->execute([$titre, $description, $id]);
     }
 
+    function get_titre_by_id($id)
+    {
+        global $db;
+
+        $request = "SELECT titre FROM works WHERE id=\"$id\"";
+        $resultat = $db->query($request);
+        $user = $resultat->fetch();
+    }
+
+    function get_desc_by_id($id)
+    {
+        global $db;
+
+        $request = "SELECT description FROM works WHERE id=\"$id\"";
+        $resultat = $db->query($request);
+        $user = $resultat->fetch();
+    }
 }
-?>
+?>  

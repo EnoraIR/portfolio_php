@@ -4,7 +4,6 @@
 	top: 0;
 	left: 0;
 	text-decoration: none;
-	color: none;
 	overflow-x: hidden;
 }
 
@@ -26,8 +25,11 @@ h2 {
 	color: #df7861;
 }
 
-a, a:visited {
+a {
 	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
 	color: #ecb390;
 }
 
@@ -50,6 +52,10 @@ p {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	font-size: 1em;
+}
+
+form {
+	transform: translateY(-17.5vh);
 }
 
 .contenu {
@@ -94,6 +100,11 @@ p {
 
 	position: relative;
 	z-index: 10;
+}
+
+.lien {
+	width: 100%;
+	text-align: center;
 }
 
 .pseudo, .mdp, .entree {
