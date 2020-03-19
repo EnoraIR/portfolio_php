@@ -77,10 +77,12 @@ if(isset($_POST["submit"]))
         <div class="container">
             <div class="pseudo">
                 <label for="uname"><b>Nom d'Utilisateur</b></label>
+                <p></br></p>
                 <input type="text" placeholder="Utilisateur" name="uname" required>
             </div>
             <div class="mdp">
                 <label for="psw"><b>Mot de Passe</b></label>
+                <p></br></p>
                 <input type="password" placeholder="Mot de Passe" name="psw" required>
             </div>
             <div class="entree">
