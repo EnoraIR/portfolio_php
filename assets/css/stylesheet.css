@@ -5,6 +5,7 @@
 	left: 0;
 	text-decoration: none;
 	color: none;
+	overflow-x: hidden;
 }
 
 body {
@@ -37,10 +38,12 @@ a:hover {
 h3 {
 	font-size: 1.8em;
 	padding-bottom: 0.5vh;
-	padding-top: 15vh;
+	padding-top: 10vh;
 	font-family: 'Playfair Display', serif;
 	font-weight: 700;
 	text-align: center;
+	text-decoration: underline;
+	text-decoration-color: #ecb390;
 }
 
 p {
@@ -99,6 +102,10 @@ p {
 
 	position: relative;
 	z-index: 10;
+}
+
+.descproj {
+	padding-bottom: 10vh;
 }
 
 /*animation des points gris début*/

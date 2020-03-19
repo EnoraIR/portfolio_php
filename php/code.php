@@ -50,20 +50,20 @@ class Works {
         return($user);
     }
 
-    function create($title, $description)
+    function create($titre, $description)
     {
         global $db;
 
-        $request = $db->prepare('INSERT INTO works (title, description) VALUES (?, ?)');
-        $request->execute([$title, $description]);
+        $request = $db->prepare('INSERT INTO works (titre, description) VALUES (?, ?)');
+        $request->execute([$titre, $description]);
     }
 
-    function update($title, $description, $id)
+    function update($titre, $description, $id)
     {
         global $db;
 
-        $request = $db->prepare('UPDATE works SET title=?, description=? WHERE id=?');
-        $request->execute([$title, $description, $id]);
+        $request = $db->prepare('UPDATE works SET titre=?, description=? WHERE id=?');
+        $request->execute([$titre, $description, $id]);
     }
 
 }

@@ -33,14 +33,9 @@ $work = new Works;
         ?></h1>
 		<div class="section">
 			<h2 class="onglet">
-				Lien 1
-			</h2>
-			<h2 class="onglet">
-				Lien 2
-			</h2>
-			<h2 class="onglet">
-				Lien 3
-			</h2>
+				<a href="index.php">
+					Accueil
+				</a>
 			<h2 class="onglet">
 				<a href="login.php">
 					Se Connecter
@@ -51,13 +46,27 @@ $work = new Works;
 					Se Déconnecter
 				</a>
 			</h2>
+			<h2 class="onglet">
+				<?php 
+					if(isset($_SESSION["account"]["username"]))
+						{echo "<a href='createproject.php'>Ajouter un projet</a>";}
+					else {
+						echo " ";
+					}
+		        ?>
+			</h2>
+			<h2 class="onglet">
+				<a href=''>A Propos</a>
+			</h2>
 		</div>
 		<div class="description">
 			<p><?php
 				$allworks = $work->get_works();
 				foreach($allworks as $w)
 					{
-						echo '<h3>'.($w["titre"]).'</h3>';
+						echo '<h3>'.($w["titre"]).'</h3>'; 
+						if(isset($_SESSION["account"]["username"]))
+							{echo "<a href=''>Modifer le projet</a>";}
 						echo '<p class="descproj">'.($w["description"]).'</p>';
 					}
 			?></p>

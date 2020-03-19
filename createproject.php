@@ -3,19 +3,15 @@
 session_start();
 include_once("php/code.php");
 
-$user = new Users;
-if(isset($_SESSION["account"]["id"]))
-{
-    header('Location: /');
-}
+$newproj = new Works;
 if(isset($_POST["submit"]))
 {
     if($_POST["submit"] === "OK")
 {
-    if($_POST['uname'] != NULL && $_POST['psw'] != NULL)
+    if($_POST['titre'] != NULL && $_POST['description'] != NULL)
     {
-        /*echo(password_hash($_POST["psw"], PASSWORD_DEFAULT));*/
-        $user->connect($_POST["uname"], $_POST["psw"]);
+        $newproj->create($_POST["titre"], $_POST["description"]);
+        header('Location: /');
     }
     else
     {
@@ -30,7 +26,7 @@ if(isset($_POST["submit"]))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <title>Page de Connexion</title>
+    <title>Ajouter un Projet</title>
 </head>
 <body>
     <div class="background">
@@ -44,7 +40,13 @@ if(isset($_POST["submit"]))
         <div class="ptgris" id="ptvhuit"></div>
     </div>
     <div class="contenu">
-        <h1>Bonjour</h1>
+        <h1><?php 
+            if(isset($_SESSION["account"]["username"]))
+                {echo($_SESSION["account"]["username"]);}
+            else
+                {echo "inconnu";}
+            /*echo($user->get_user(1)["username"]);*/
+        ?></h1>
         <div class="section">
             <h2 class="onglet">
                 <a href="index.php">
@@ -73,21 +75,21 @@ if(isset($_POST["submit"]))
                 <a href=''>A Propos</a>
             </h2>
         </div>
-        <form action="login.php" method="post">
+        <form action="createproject.php" method="post">
         <div class="container">
             <div class="pseudo">
-                <label for="uname"><b>Nom d'Utilisateur</b></label>
-                <input type="text" placeholder="Utilisateur" name="uname" required>
+                <label for="titre"><b>Titre du Projet</b></label>
+                <input type="text" placeholder="Projet X" name="titre" required>
             </div>
             <div class="mdp">
-                <label for="psw"><b>Mot de Passe</b></label>
-                <input type="password" placeholder="Mot de Passe" name="psw" required>
+                <label for="description"><b>Description du Projet</b></label>
+                <p></br></p>
+                <textarea rows="5" cols="40" name="description" placeholder="A Propos de ce Projet" required></textarea>
             </div>
             <div class="entree">
-                <button type="submit" name="submit" value="OK">Se connecter</button>
+                <button type="submit" name="submit" value="OK">Ajouter</button>
             </div>
         </div>
         </form>
     </div>
 </body>
-</html>
