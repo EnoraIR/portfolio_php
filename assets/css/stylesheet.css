@@ -58,6 +58,57 @@ form {
 	transform: translateY(-17.5vh);
 }
 
+label {
+	padding-bottom: 0.5vh;
+	padding-top: 7.5vh;
+	color: #df7861;
+
+	font-size: 1.2em;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+input, textarea {
+	width: 50%;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	padding-left: 1em;
+	border: 1.5px solid #ecdfc8;
+	border-radius: 5px;
+
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1em;	
+}
+
+input {
+	height: 1.75em;
+}
+
+input:focus, textarea:focus {
+	outline: none;
+	border: 1.5px solid #ecb390;
+}
+
+button {
+  background-color: #ecdfc8;
+  border: 1.5px solid #ecdfc8;
+  border-radius: 5px;
+  color: #df7861;
+  padding: 0.75em 0.75em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+}
+
+button:hover {
+	background-color: #df7861;
+	color: #fcf8e8;
+	border: 1.5px solid #df7861;
+	border-radius: 5px;
+}
+
 .contenu {
 	padding-top: 5vh;
 
@@ -94,8 +145,7 @@ form {
 
 .container {
 	width: 50vw;
-	height: 50vh;
-	padding-left: 35vw;	
+	padding-left: 25vw;	
 	padding-top: 25vh;
 
 	position: relative;
@@ -110,7 +160,7 @@ form {
 .pseudo, .mdp, .entree {
 	width: 50vw;
 	padding-top: 5vh;
-
+	text-align: center;
 	position: relative;
 	z-index: 10;
 }

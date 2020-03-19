@@ -79,6 +79,7 @@ if(isset($_POST["submit"]))
         <div class="container">
             <div class="pseudo">
                 <label for="titre"><b>Titre du Projet</b></label>
+                <p></br></p>
                 <input type="text" placeholder="Projet X" name="titre" required>
             </div>
             <div class="mdp">

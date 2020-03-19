@@ -3,7 +3,6 @@
 session_start();
 include_once("php/code.php");
 
-$id = $_GET["id"];
 $newproj = new Works;
 
 if(isset($_POST["submit"]))
@@ -11,8 +10,8 @@ if(isset($_POST["submit"]))
     if($_POST["submit"] === "OK")
 {
     if($_POST['titre'] != NULL && $_POST['description'] != NULL)
-    {
-        $newproj->update($_POST["titre"], $_POST["description"], $id);
+    {   
+        $newproj->update($_POST["titre"], $_POST["description"], $_GET["id"]);
         header('Location: /');
     }
     else
@@ -78,13 +77,13 @@ if(isset($_POST["submit"]))
                 <a href=''>A Propos</a>
             </h2>
         </div>
-            <?php
-                echo '<h3>Projet n°'.$id.'</h3>';
-            ?>
         <div class="container">
-            <form action="createproject.php" method="post">
+            <form action="modifwork.php" method="post">
                 <div class="pseudo">    
-                    <label for="titre"><b>Titre du Projet</b></label>
+                    <?php 
+                        echo '<label for="titre"><b>Titre du Projet n°'.$_GET["id"].'</b></label>'
+                    ;?>
+                    <p></br></p>
                     <input type="text" value="<?php
                         $titre = $newproj->get_titre_by_id($_GET['id']);
                         echo $titre;

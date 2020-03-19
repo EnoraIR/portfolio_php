@@ -62,7 +62,7 @@ class Works {
     {
         global $db;
 
-        $request = $db->prepare("UPDATE works SET titre=?, description=? WHERE id=\"$id\"");
+        $request = $db->prepare('UPDATE works SET titre=?, description=? WHERE id=$id');
         $request->execute([$titre, $description, $id]);
     }
 
