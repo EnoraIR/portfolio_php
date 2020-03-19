@@ -58,7 +58,7 @@ class Works {
         $request->execute([$titre, $description]);
     }
 
-    function del($titre, $description, $id)
+    function update($titre, $description, $id)
     {
         global $db;
 
